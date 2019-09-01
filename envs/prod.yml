@@ -1,0 +1,12 @@
+name: blackjack
+channels:
+  - anaconda
+dependencies:
+  - python=3.7
+  - numpy
+  - colorama
+  - pip
+  - matplotlib
+  - pip:
+      - loguru
+      - fire

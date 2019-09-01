@@ -1,0 +1,22 @@
+name: blackjack
+channels:
+  - anaconda
+dependencies:
+  - python=3.7
+  - numpy
+  - coverage
+  - colorama
+  - pytest
+  - pytest-cov
+  - pylint
+  - autopep8
+  - flake8
+  - sphinx
+  - pip
+  - matplotlib
+  - pip:
+      - loguru
+      - fire
+      - sphinx_rtd_theme
+      - coveralls
+      - pytest-mock
