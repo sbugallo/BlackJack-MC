@@ -31,3 +31,6 @@ class Player:
 
     def get_next_action(self, possible_actions: Dict[Action, str]):
         raise NotImplementedError("This method must be implemented in children classes")
+
+    def get_insurance_action(self):
+        raise NotImplementedError("This method must be implemented in children classes")

@@ -10,12 +10,12 @@ class Dealer(Player):
         if Action.hit not in possible_actions:
             raise ValueError("Dealer must always have the possibility to hit.")
 
-        elif self.current_hands_values[0] < 17:
+        if self.current_hands_values[0] >= 17:
             for card_id, card in self.current_hands[0].items():
                 if card.rank == "A" and self.current_hands_values[0] >= 17:
                     card.swap_ace_value()
 
-            if self.current_hands_values[0] < 17:
-                return Action.hit
+        else:
+            return Action.hit
 
         return Action.stand
