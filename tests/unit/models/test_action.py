@@ -20,4 +20,4 @@ def test_action_correct_values():
     assert Action.double_down.value == 2
     assert Action.split.value == 3
     assert Action.insurance_yes.value == 4
-    assert Action.insurance_no.value == 4
+    assert Action.insurance_no.value == 5
