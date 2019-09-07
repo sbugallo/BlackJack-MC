@@ -82,8 +82,13 @@ class Player:
 
     def _compute_hands_values(self) -> None:
         """Computes the indivual value of each player's hand."""
-        self.current_hands_values = {hand_id: cards[0].value + cards[1].value for hand_id, cards in
-                                     self.current_hands.items()}
+
+        for hand_id, cards in self.current_hands.items():
+            hand_value = 0
+            for card_id, card in cards.items():
+                hand_value += card.value
+
+            self.current_hands_values[hand_id] = hand_value
 
     def get_next_action(self, possible_actions: Dict[Action, str]) -> Action:
         """
